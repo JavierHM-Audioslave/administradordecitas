@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/customForMobile.css" media="(max-width: 800px)" >
+</head>
+<body>
+    <header>ADMINISTRADOR DE PACIENTES DE VETERINARIA</header>
+    <div id="contenedor">
+        <div id="noValidado">Todos los mensajes son obligatorios</div>
+        <div id="contenedorFlex">
+            <div id="flexIzquierdo">
+                <form action="#">
+                    <input id="idDeCitaAEditar" type="hidden">
+                    <legend class="fuente">Datos del Paciente</legend>
+                    <div class="flexDeLabelEInput">
+                        <label for="nombreMascota" class="flotarIzquierda negritaYMargin">Nombre mascota: </label>
+                        <div class="flotarDerecha disenioDeBorde2">
+                            <input class="disenioDeBorde" id="nombreMascota" type="text" placeholder="Nombre Mascota">
+                        </div>
+                    </div>
+                    <div class="flexDeLabelEInput">
+                        <label for="nombrePropietario" class="flotarIzquierda negritaYMargin">Propietario: </label>
+                        <div class="flotarDerecha disenioDeBorde2">
+                            <input class="disenioDeBorde" id="nombrePropietario" type="text" placeholder="Nombre Dueño de la Mascota">
+                        </div>
+                    </div>
+                    <div class="flexDeLabelEInput">
+                        <label for="telefono" class="flotarIzquierda negritaYMargin">Teléfono: </label>
+                        <div class="flotarDerecha disenioDeBorde2">
+                            <input class="disenioDeBorde" id="telefono" type="text" placeholder="Número de Teléfono">
+                        </div>
+                    </div>
+                    <div class="flexDeLabelEInput">
+                        <label for="fecha" class="flotarIzquierda negritaYMargin">Fecha: </label>
+                        <div class="flotarDerecha disenioDeBorde2">
+                            <input class="disenioDeBorde" id="fecha" type="date">
+                        </div>
+                    </div>
+                    <div class="flexDeLabelEInput">
+                        <label for="hora" class="flotarIzquierda negritaYMargin">Hora: </label>
+                        <div class="flotarDerecha disenioDeBorde2">
+                            <input class="disenioDeBorde" id="hora" type="time">
+                        </div>
+                    </div>
+                    <div class="flexDeLabelEInput">
+                        <label id="alignSelfFlexStart" for="sintomas" class="flotarIzquierda negritaYMargin">Síntomas: </label>
+                        <div class="flotarDerecha disenioDeBorde2">
+                            <textarea class="disenioDeBorde" id="sintomas"></textarea>
+                        </div>
+                    </div>
+                    <button id="botonCrearCita" type="submit">CREAR CITA</button>
+                </form>
+            </div>
+            <div id="flexDerecho">
+                <div id="tituloDeContenedorDeCitas" class="fuente">Administra tus citas</div>
+                <div id="contenedorDeCitas">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>
