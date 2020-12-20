@@ -105,7 +105,7 @@ class UI {
             ui.modificarCita(e, citas, ui);
         }
 
-        ui.resetearForm();
+        ui.resetearForm(); // Podria evitarme implementar este método haciendo docuemnt.querySelector("form").reset() //
     }
 
 
@@ -298,6 +298,7 @@ class UI {
             imgDelete.style.marginLeft = ".5em";
             elemContenedorDeDelete.appendChild(imgDelete);
             elemContenedorDeDelete.addEventListener("click", e => e.target.parentElement.remove());   /* Elimina la cita al tocar el botón de ELIMINAR. */
+            // console.log(citas);
 
             elemFlex.appendChild(elemContenedorDeDelete);
 
@@ -322,7 +323,6 @@ class UI {
             imgPencil.style.marginLeft = ".5em";
             elemContenedorDeEdit.appendChild(imgPencil);
             elemContenedorDeEdit.addEventListener("click", e => ui.editarCitaEnForm(cita)); 
-
             elemFlex.appendChild(elemContenedorDeEdit);
 
             const elemHR = document.createElement("hr");
@@ -334,10 +334,14 @@ class UI {
         }
     }
     /********************************************************************************************************************************************************* */
+
+
+
 }
+
 
 
 
 let citas = [];
 const ui = new UI();
-document.querySelector("button").addEventListener("click", function(e){ui.crearOModificarCita(e, citas, ui)});
+document.querySelector("button").addEventListener("click", function(e){ui.crearOModificarCita(e, citas, ui)}); // IMPORTANTE!!
